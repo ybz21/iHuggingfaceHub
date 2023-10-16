@@ -1,0 +1,3 @@
+flask
+## for client, should also install the following libs
+# transformers

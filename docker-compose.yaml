@@ -1,0 +1,7 @@
+services:
+  hub-server:
+    build: .
+    ports:
+      - "9999:9999"
+    volumes:
+      - "./files:/app/files"
