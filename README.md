@@ -3,7 +3,7 @@
 </p>
 <br><br>
 
-# iHuggingfaceHub😜: Your own private huggingface hub!
+# iHuggingfaceHub😜: Your own private huggingface hub server!
 # Goal
 
 Make your own huggingface hub with local files.
@@ -63,5 +63,5 @@ if __name__ == '__main__':
 ```
 
 # TODO
-
-* Add dataset Support
+* Add revision support
+* Add dataset support

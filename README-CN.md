@@ -1,7 +1,7 @@
 # iHuggingfaceHub😜: 你自己的私有Huggingface仓库！
 # 目标
 
-使用本地文件创建自己的 Huggingface Hub(私有仓库)。
+使用本地文件创建自己的 Huggingface Hub(私有仓库)服务器。
 
 您可以使用 Hugging Face Transformers 和 Datasets 库访问本地模型和数据集，就像这样：
 
@@ -59,5 +59,5 @@ if __name__ == '__main__':
 ```
 
 # TODO
-* Add revision support
-* Add dataset support
+* 增加版本（revision）支持
+* 增加数据集（dataset） 支持
