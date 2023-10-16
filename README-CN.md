@@ -7,8 +7,8 @@
 
 ```python
 import os
+os.environ['HF_ENDPOINT'] = 'http://server-ip:9999'
 from transformers import AutoModelForCausalLM
-os.environ['HF_ENDPOINT'] = 'http://server-ip:9999'  
 model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen-7B-Chat", device_map="auto", trust_remote_code=True).eval()
 ```
 
@@ -39,12 +39,13 @@ step2. 加载私有仓库的模型
 
 ```python
 import os
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
-
 
 def main():
     os.environ['HF_ENDPOINT'] = 'http://127.0.0.1:9999'  # change to app.py host ip
+
+    # must import transformers after set HF_ENDPOINT env
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers.generation import GenerationConfig
     tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen-7B-Chat", trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen-7B-Chat", device_map="auto", trust_remote_code=True).eval()
     generation_config = GenerationConfig.from_pretrained("Qwen/Qwen-7B-Chat", trust_remote_code=True,
